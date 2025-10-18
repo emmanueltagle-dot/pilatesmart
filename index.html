@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pilatesmart</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #111;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      max-width: 700px;
+      padding: 2rem;
+    }
+
+    /* Animación base */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin: 0;
+      letter-spacing: -0.5px;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: #555;
+      margin: 0.8rem 0 1.8rem;
+      font-size: 1.4rem;
+      line-height: 1.4;
+    }
+
+    .description {
+      font-size: 1.05rem;
+      color: #222;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .contact a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.6rem 1.4rem;
+      border: 1px solid #000;
+      border-radius: 25px;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+    .contact a:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    footer {
+      margin-top: 2rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      .tagline { font-size: 1.2rem; }
+      .description { font-size: 1rem; }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="hero">
+    <h1 class="fade-in" style="animation-delay: 0.1s;">PILATESMART</h1>
+    <p class="tagline fade-in" style="animation-delay: 0.3s;">“Tu cuerpo. Tu centro. Tu poder. Muévete de forma inteligente con Martina”</p>
+    <p class="description fade-in" style="animation-delay: 0.5s;">
+      Pilatesmart es el método personal de Martina, donde cuerpo y mente se alinean para ganar fuerza, control y bienestar. Con más de 20 años de experiencia, te guía sin improvisación, con un enfoque consciente, inteligente y preciso del movimiento, adaptado a ti.
+    </p>
+    <div class="contact fade-in" style="animation-delay: 0.7s;">
+      <a href="mailto:contact@pilatesmart.net">contact@pilatesmart.net</a>
+    </div>
+    <footer class="fade-in" style="animation-delay: 0.9s;">
+      <p>© 2025 Pilatesmart</p>
+    </footer>
+  </div>
+
+  <script>
+    // Aparecer al cargar
+    document.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.fade-in');
+      elements.forEach((el, i) => {
+        setTimeout(() => el.classList.add('appear'), i * 150);
+      });
+    });
+  </script>
+
+</body>
+</html>
